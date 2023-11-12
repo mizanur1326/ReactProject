@@ -6,6 +6,9 @@ import Service from "../pages/service";
 import UseState from "../pages/useState";
 import UseEffect from "../pages/useEffect";
 import UseContext from "../pages/useContext";
+import UseContextCreateContext from "../pages/useContextCreateContext";
+import Users from "../pages/users";
+import UserInsert from "../pages/userInsert";
 
 
 function NoPage(){
@@ -28,6 +31,9 @@ function Main(){
                         <Route path='/usestate' element={<UseState />}></Route>
                         <Route path='/useeffect' element={<UseEffect />}></Route>
                         <Route path='/useContext' element={<UseContext />}></Route>
+                        <Route path='/useContextCreateContext' element={<UseContextCreateContext />}></Route>
+                        <Route path='/users' element={<Users />}></Route>
+                        <Route path='/newuser' element={<UserInsert />}></Route>
                         <Route path="*" element={<NoPage />}></Route>
                     </Route>
                 </Routes>
