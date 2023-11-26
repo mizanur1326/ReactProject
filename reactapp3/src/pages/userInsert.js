@@ -1,9 +1,11 @@
 import axios from "axios";
 import {useEffect, useState} from "react";
+import { useNavigate } from "react-router-dom";
 
 
 function UserInsert(){
     const [userInfo, setUseInfo] = useState({});
+    const navigate = useNavigate();
 
     const handleSubmit = (e) =>{
         e.preventDefault();
@@ -19,8 +21,9 @@ function UserInsert(){
 
     const userInsert = (d) =>{
         axios.post("http://localhost/React/reactapp3/api/userInsert.php", {data:d}).then(res=>{
-            alert("Inserted");
-            console.log(res.data);
+            //alert("Inserted");
+            alert(res.data.msg);
+            return navigate('/users');
         })
     }
     console.log(userInfo);

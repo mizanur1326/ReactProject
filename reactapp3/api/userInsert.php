@@ -4,16 +4,22 @@
 
     //print_r($abc);
 
-    $name = $abc->data->name;
-    $email = $abc->data->email;
+    if(isset($abc->data->name) && !empty($abc->data->name) && isset($abc->data->email) && !empty($abc->data->email)){
 
-    $sql = "INSERT INTO user VALUES(NULL, '$name', '$email', now())";
+        $name = $abc->data->name;
+        $email = $abc->data->email;
 
-    $db->query($sql);
+        $sql = "INSERT INTO user VALUES(NULL, '$name', '$email', now())";
 
-    if($db->affected_rows>0){
-        echo "Success";
-    }else{
-        echo "Error";
+        $db->query($sql);
+
+        if($db->affected_rows>0){
+            echo json_encode(["msg"=>"Successfully Inserted"]);
+        }else{
+            echo json_encode(["msg"=>"Problem"]);
+        }         
+    }else {
+        echo json_encode(["msg"=>"Empty Not Allowed"]);
     }
+    
 ?>

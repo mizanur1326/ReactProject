@@ -9,7 +9,7 @@ function Users(){
     
       const [isuser, setuser] = useState([]);
 
-      const alluser = async (ids) => {
+      const alluser = async () => {
         
           axios.get(`http://localhost/React/reactapp3/api/user.php`)
           .then(res => {

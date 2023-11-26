@@ -9,6 +9,7 @@ import UseContext from "../pages/useContext";
 import UseContextCreateContext from "../pages/useContextCreateContext";
 import Users from "../pages/users";
 import UserInsert from "../pages/userInsert";
+import Owl from "../pages/owl";
 
 
 function NoPage(){
@@ -35,6 +36,7 @@ function Main(){
                         <Route path='/users' element={<Users />}></Route>
                         <Route path='/newuser' element={<UserInsert />}></Route>
                         <Route path="*" element={<NoPage />}></Route>
+                        <Route path='/owl' element={<Owl/>}></Route>
                     </Route>
                 </Routes>
             </BrowserRouter>
