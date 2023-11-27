@@ -10,6 +10,7 @@ import UseContextCreateContext from "../pages/useContextCreateContext";
 import Users from "../pages/users";
 import UserInsert from "../pages/userInsert";
 import Owl from "../pages/owl";
+import Carousel from "../pages/carousel";
 
 
 function NoPage(){
@@ -37,6 +38,7 @@ function Main(){
                         <Route path='/newuser' element={<UserInsert />}></Route>
                         <Route path="*" element={<NoPage />}></Route>
                         <Route path='/owl' element={<Owl/>}></Route>
+                        <Route path='/carousel' element={<Carousel/>}></Route>
                     </Route>
                 </Routes>
             </BrowserRouter>
