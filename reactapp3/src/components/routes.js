@@ -7,10 +7,11 @@ import UseState from "../pages/useState";
 import UseEffect from "../pages/useEffect";
 import UseContext from "../pages/useContext";
 import UseContextCreateContext from "../pages/useContextCreateContext";
-import Users from "../pages/users";
 import UserInsert from "../pages/userInsert";
-import Owl from "../pages/owl";
 import Carousel from "../pages/carousel";
+import Blog from "../pages/blog";
+import Contact from "../pages/contact";
+import Users from "../pages/users";
 
 
 function NoPage(){
@@ -34,10 +35,11 @@ function Main(){
                         <Route path='/useeffect' element={<UseEffect />}></Route>
                         <Route path='/useContext' element={<UseContext />}></Route>
                         <Route path='/useContextCreateContext' element={<UseContextCreateContext />}></Route>
+                        <Route path='/blog' element={<Blog />}></Route>
+                        <Route path='/contact' element={<Contact />}></Route>
                         <Route path='/users' element={<Users />}></Route>
                         <Route path='/newuser' element={<UserInsert />}></Route>
                         <Route path="*" element={<NoPage />}></Route>
-                        <Route path='/owl' element={<Owl/>}></Route>
                         <Route path='/carousel' element={<Carousel/>}></Route>
                     </Route>
                 </Routes>

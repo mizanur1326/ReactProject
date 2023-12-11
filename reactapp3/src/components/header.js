@@ -56,7 +56,7 @@ function Header(){
                             <Link to="/" className="nav-item nav-link active">Home</Link>
                             <Link to="/about" className="nav-item nav-link">About</Link>
                             <Link to="/service" className="nav-item nav-link">Services</Link>
-                            <Link to="./users" className="nav-item nav-link">Users List</Link>
+                            <Link to="./blog" className="nav-item nav-link">Blog</Link>
                             <div className="nav-item dropdown">
                                 <a href="#" className="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                                 <div className="dropdown-menu m-0 bg-primary">
@@ -67,7 +67,7 @@ function Header(){
                                     <a href="404.html" className="dropdown-item">404 Page</a>
                                 </div>
                             </div>
-                            <a href="contact.html" className="nav-item nav-link">Contact</a>
+                            <Link to="./contact" className="nav-item nav-link">Contact</Link>
                         </div>
                     </div>
                 </nav>
