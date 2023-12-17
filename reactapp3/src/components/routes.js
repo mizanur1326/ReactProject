@@ -12,6 +12,7 @@ import Carousel from "../pages/carousel";
 import Blog from "../pages/blog";
 import Contact from "../pages/contact";
 import Users from "../pages/users";
+import Cart from "../pages/cart";
 
 
 function NoPage(){
@@ -31,15 +32,19 @@ function Main(){
                         <Route index element={<Home/>}></Route>
                         <Route path='/about'  element={<About/>}></Route>
                         <Route path='/service' element={<Service/>}></Route>
+                        <Route path='/blog' element={<Blog />}></Route>
+                        <Route path='/contact' element={<Contact />}></Route>
+                        <Route path='/cart' element={<Cart />}></Route>
+
+                        <Route path="*" element={<NoPage />}></Route>
+
+
                         <Route path='/usestate' element={<UseState />}></Route>
                         <Route path='/useeffect' element={<UseEffect />}></Route>
                         <Route path='/useContext' element={<UseContext />}></Route>
                         <Route path='/useContextCreateContext' element={<UseContextCreateContext />}></Route>
-                        <Route path='/blog' element={<Blog />}></Route>
-                        <Route path='/contact' element={<Contact />}></Route>
                         <Route path='/users' element={<Users />}></Route>
                         <Route path='/newuser' element={<UserInsert />}></Route>
-                        <Route path="*" element={<NoPage />}></Route>
                         <Route path='/carousel' element={<Carousel/>}></Route>
                     </Route>
                 </Routes>

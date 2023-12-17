@@ -68,6 +68,7 @@ function Header(){
                                 </div>
                             </div>
                             <Link to="./contact" className="nav-item nav-link">Contact</Link>
+                            <Link to="./cart" className="nav-item nav-link bi bi-cart">Cart</Link>
                         </div>
                     </div>
                 </nav>
