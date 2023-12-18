@@ -2,7 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 
 
-function Service(){
+function Cart(){
 
     const[product, setProduct] = useState([]);
 
@@ -11,7 +11,7 @@ function Service(){
             getProduct();
         },[]
     )
-    console.log(product);
+    //console.log(product);
 
     const getProduct = () => {
         axios.get("http://localhost:8080/productsAll").then(
@@ -24,7 +24,7 @@ function Service(){
                     {/* <!-- Page Header Start --> */}
         <div className="container-fluid page-header py-5">
             <div className="container text-center py-5">
-                <h1 className="display-2 text-white mb-4 animated slideInDown">Services</h1>
+                <h1 className="display-2 text-white mb-4 animated slideInDown">Cart</h1>
                 <nav aria-label="breadcrumb">
                     <ol className="breadcrumb justify-content-center mb-0 animated slideInDown">
                         <li className="breadcrumb-item"><a href="#">Home</a></li>
@@ -55,11 +55,9 @@ function Service(){
                                 </div>
                             </div>
                             <h4>{item.product}</h4>
-                            <h3 className="fs-5">Price: {item.price}</h3>
-                            <p className="fs-5">Category: {item.category}</p>
-                            <p className="fs-5">Model: {item.model}</p>
-                            {/* <p className="fs-5">Lorem ipsum dolor sit amet consectetur adipisc elit sed.</p> */}
-                            <button type="button" className="btn btn-primary border-0 rounded-pill px-4 py-3">Learn More</button>
+                            <p className="fs-5">Lorem ipsum dolor sit amet consectetur adipisc elit sed.</p>
+                            <button type="button" className="btn btn-primary border-0 rounded-pill px-4 py-3 mb-2">Learn More</button>
+                            <button type="button" className="btn btn-primary border-0 rounded-pill px-4 py-3">Add to Cart</button>
                         </div>
                     </div>
                     ))}
@@ -109,4 +107,4 @@ function Service(){
         </>
     )
 }
-export default Service;
+export default Cart;
