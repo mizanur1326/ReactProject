@@ -14,7 +14,7 @@ function Service(){
     console.log(product);
 
     const getProduct = () => {
-        axios.get("http://localhost:8080/productsAll").then(
+        axios.get("http://localhost:8080/allService").then(
             (res)=> setProduct(res.data)
         )
     }
@@ -54,11 +54,11 @@ function Service(){
                                     <i className="fa fa-spider fa-3x text-primary"></i>
                                 </div>
                             </div>
-                            <h4>{item.product}</h4>
-                            <h3 className="fs-5">Price: {item.price}</h3>
-                            <p className="fs-5">Category: {item.category}</p>
-                            <p className="fs-5">Model: {item.model}</p>
-                            {/* <p className="fs-5">Lorem ipsum dolor sit amet consectetur adipisc elit sed.</p> */}
+                            <h4>{item.serviceName}</h4>
+                            <p className="fs-5">{item.description}</p>
+                            <p className="fs-5">Price: {item.price}</p>
+                            {/* <p className="fs-5">{item.image}</p> */}
+                            
                             <button type="button" className="btn btn-primary border-0 rounded-pill px-4 py-3">Learn More</button>
                         </div>
                     </div>

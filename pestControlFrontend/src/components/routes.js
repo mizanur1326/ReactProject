@@ -13,6 +13,8 @@ import Blog from "../pages/blog";
 import Contact from "../pages/contact";
 import Users from "../pages/users";
 import Cart from "../pages/cart";
+import UserRegistration from "./userRegistration";
+
 
 
 function NoPage(){
@@ -35,6 +37,7 @@ function Main(){
                         <Route path='/blog' element={<Blog />}></Route>
                         <Route path='/contact' element={<Contact />}></Route>
                         <Route path='/cart' element={<Cart />}></Route>
+                        <Route path='/registration' element={<UserRegistration />}></Route>
 
                         <Route path="*" element={<NoPage />}></Route>
 
